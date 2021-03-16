@@ -44,16 +44,15 @@ img {
   text-align: center;
 }
 
-#why .container>.col-lg-12 {
+#why .container > .col-lg-12 {
   margin-top: 80px;
 }
 
 #why .container img {
   background-color: #428bca;
   border-radius: 50%;
-  padding: 30px
+  padding: 30px;
 }
-
 
 /* RESPONSIVE XS MAX-WIDTH 767PX */
 @media all and (max-width: 767px) {
@@ -73,10 +72,6 @@ img {
   }
   #lezioni .container > .col-xs-12,
   #steps .container > .col-xs-12,
-  #steps .container > .col-xs-12,
-  #steps .container > .col-xs-12,
-  #why .container > .col-xs-12,
-  #why .container > .col-xs-12,
   #why .container > .col-xs-12 {
     margin-bottom: 20px;
     padding: 0;
@@ -93,3 +88,86 @@ img {
   }
 }
 /* / RESPONSIVE XS MAX-WIDTH 767PX */
+
+/* RESPONSIVE MD 768PX - 991PX */
+@media all and (min-width: 768px) and (max-width: 991px) {
+  * {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+  }
+  .container {
+    margin: 0px;
+    padding: 1% 2%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #lezioni .container {
+    background-image: linear-gradient(45deg, #16ace7, #4780d4);
+  }
+  #steps .container {
+    background-image: linear-gradient(45deg, #cbe0de, #4c5758);
+  }
+  #why .container {
+    background-image: linear-gradient(45deg, #d1702f, #84dde6);
+  }
+  #why .container > .col-lg-12 {
+    margin-top: 20px;
+  }
+  #why img {
+    height: 90px;
+    padding: 10%;
+    animation-name: rotation;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+  hr {
+    display: none;
+  }
+  h1 {
+    margin-bottom: 15px;
+    padding: 5px;
+    color: white;
+    background-color: rgb(230, 48, 48);
+    transition: color 5s ease-in;
+    animation-name: change-color;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+  }
+  @keyframes change-color {
+    0% {
+      color: white;
+    }
+    25% {
+      color: rgba(255, 255, 255, 0.726);
+    }
+    50% {
+      color: rgb(60, 68, 68);
+    }
+    75% {
+      color: rgb(22, 29, 28);
+    }
+    100% {
+      color: white;
+    }
+  }
+  h3 {
+    color: black;
+    text-shadow: 1px 1px 1px rgb(231, 218, 218);
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  img {
+    height: 150px;
+  }
+}
+/* / RESPONSIVE 992PX */
